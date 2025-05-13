@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Slick Playground</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="./slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css">
+  <style type="text/css">
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    /* .slider {
+      width: 50%;
+      margin: 100px auto;
+    }
+
+    .slick-slide {
+      margin: 0px 20px;      
+    } */
+
+    .slick-slide img {
+      width: 100%;
+
+
+    }
+
+
+    .slick-slide {
+      transition: all ease-in-out .3s;
+      /* opacity: .2;       */
+    }
+
+    /* .slick-active {
+      opacity: .5;
+
+    } */
+
+    /* .slick-current {
+      opacity: 1;
+    } */
+     .centre{
+      display: flex;
+      -ms-flex-align: center;
+      align-items: center;
+     }
+  </style>
+</head>
+
+<body>
+
+  <section class="autoplay">
+   
+    <div><img src="images/dino1.webp" alt="dino1"></div>
+    <div><img src="images/dino2.webp" alt="dino2"></div>
+    <div><img src="images/dino3.webp" alt="dino3"></div>
+    <div><img src="images/dino4.avif" alt="dino4"></div>
+    
+  </section>
+
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+  <script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript">
+    $(document).on('ready', function () {
+      $('.autoplay').slick({
+        dots: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1000
+      });
+    });
+    
+  </script>
+
+</body>
+
+</html>
